@@ -3,21 +3,21 @@
 # Leemos el dataset
 import pandas as pd
 import csv
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import re
 Data_entrenamiento=pd.read_csv("/home/ec2-user/git/Bag-of-Words-Meets-Bags-of-Popcorn/Input/labeledTrainData.tsv",sep="\t")
 ### Vamos a filtrar, para seleccionar solo una parte del dataset:
-renglones=input("Seleccina los renglones a traducir:")
+renglones=str(input("Seleccina los renglones a traducir:"))
 n=int(re.split("-",renglones)[0])
 u=int(re.split("-",renglones)[1])
 ## Filtramos el dataset
 Data_entrenamiento=Data_entrenamiento.iloc[n:u,]
-
+translator=Translator()
 # Comenzamos a tarducir a español
 reviews=list()
 for i in Data_entrenamiento["review"].values:
-    translator=Translator()
-    reviews.append(translator.translate(i,dest="es").text)
+    #translator=Translator()
+    reviews.append(GoogleTranslator(source="en",target="es").translate(i))
     
 Data_entrenamiento["review_español"]=reviews
 # Lo guardamos como csv
