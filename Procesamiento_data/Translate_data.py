@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Leemos el dataset
 import pandas as pd
 import csv
