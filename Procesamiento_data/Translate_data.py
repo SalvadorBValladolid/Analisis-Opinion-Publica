@@ -12,7 +12,7 @@ n=int(re.split("-",renglones)[0])
 u=int(re.split("-",renglones)[1])
 ## Filtramos el dataset
 Data_entrenamiento=Data_entrenamiento.iloc[n:u,]
-translator=Translator()
+
 # Comenzamos a tarducir a español
 reviews=list()
 for i in Data_entrenamiento["review"].values:
