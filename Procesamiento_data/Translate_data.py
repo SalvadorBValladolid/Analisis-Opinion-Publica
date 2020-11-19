@@ -21,5 +21,5 @@ for i in Data_entrenamiento["review"].values:
     
 Data_entrenamiento["review_español"]=reviews
 # Lo guardamos como csv
-Data_entrenamiento.to_csv("Data entrenamiento-"+renglones+".csv",sep=",",quotechar='"',index=False,
-            quoting=csv.QUOTE_ALL)
+Data_entrenamiento.to_csv("/home/ec2-user/git/Analisis-Opinion-Publica/data/Data entrenamiento-"+renglones+".csv",sep=",",quotechar='"',index=False,
+            quoting=csv.QUOTE_ALL,encoding="utf-8")
