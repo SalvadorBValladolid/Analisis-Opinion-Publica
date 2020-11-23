@@ -31,6 +31,8 @@ python Translate_data.py;
 
 csv=".csv"
 nueva_data="../data/Data entrenamiento-$renglones$csv"
+export csv;
+export nueva_data;
 
 git pull;
 
@@ -39,6 +41,7 @@ git commit $nueva_data -m "Agrego mas data";
 git push;
 
 
+#aws s3 cp s3://example.data.analysis.chavita//Instancia_AWS.sh .
 
 
 
