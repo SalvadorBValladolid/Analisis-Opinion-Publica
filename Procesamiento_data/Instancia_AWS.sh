@@ -32,6 +32,8 @@ python Translate_data.py;
 csv=".csv"
 nueva_data="../data/Data entrenamiento-$renglones$csv"
 
+git pull;
+
 git add $nueva_data;
 git commit $nueva_data -m "Agrego mas data";
 git push;
