@@ -36,7 +36,6 @@ git add $nueva_data;
 git commit $nueva_data -m "Agrego mas data";
 git push;
 
-"/home/ec2-user/Data entrenamiento-2400-2700.csv"
 
 
 
